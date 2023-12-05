@@ -7,6 +7,7 @@ lazy val root = (project in file("."))
     name := "aoc2023",
     libraryDependencies ++= Seq(
       "dev.zio" %% "zio" % "2.0.19",
-      "dev.zio" %% "zio-streams" % "2.0.19"
+      "dev.zio" %% "zio-streams" % "2.0.19",
+      "com.lihaoyi" %% "fastparse" % "3.0.2"
     )
   )
