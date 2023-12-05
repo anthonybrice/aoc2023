@@ -38,9 +38,10 @@ object Day1 extends ZIOAppDefault:
 
   def firstNumFromRight(x: String) =
     val ys = Seq(("0",0),("1",1),("2",2),("3",3),("4",4),("5",5),("6",6),("7",7),("8",8),("9",9),("orez",0),("eno",1),("owt",2),("eerht",3),("ruof",4),("evif",5),("xis",6),("neves",7),("thgie",8),("enin",9))
+    val xr = x.reverse
     var z = (Integer.MAX_VALUE, Integer.MAX_VALUE)
     ys.foreach { (s, n) =>
-      val idx = x.reverse.indexOf(s)
+      val idx = xr.indexOf(s)
       if idx != -1 && idx < z._1 then z = (idx, n)
     }
     z._2
