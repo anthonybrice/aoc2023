@@ -13,7 +13,7 @@ object Day1 extends ZIOAppDefault:
       _ = println(part2(x))
     yield ()
 
-  def part1(x: Seq[String]) =
+  def part1(x: Seq[String]) = 
     x.map { s =>
       val firstDigit = s.find(isDigit).get
       val lastDigit = s.findLast(isDigit).get
